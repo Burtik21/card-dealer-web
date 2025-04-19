@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rozdávač Karet</title>
+</head>
+<body>
+<h1>Vítej u Rozdávače</h1>
+<p>Ovládání bude zde.</p>
+
+<script>
+    fetch('/api/status')
+        .then(res => res.json())
+        .then(data => {
+            const p = document.createElement('p');
+            p.textContent = `Status: ${data.status}, čas: ${new Date(data.timestamp).toLocaleTimeString()}`;
+            document.body.appendChild(p);
+        });
+</script>
+</body>
+</html>

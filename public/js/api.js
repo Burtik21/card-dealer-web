@@ -1,9 +1,10 @@
 // 📡 Pošli úhel na /api/deal
-export function deal(angle, user = 'user1') {
+export function deal(angle) {
+    let steps = angle * 1.5
     return fetch('/api/deal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ angle, user })
+        body: JSON.stringify({ steps})
     }).then(res => res.json());
 }
 

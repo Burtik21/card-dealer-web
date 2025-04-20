@@ -22,9 +22,9 @@ exports.kick = (req, res) => {
 };
 
 exports.deal = async (req, res) => {
-    const {angle } = req.body;
-    let steps = angle * 1.5
-    console.log("angle: ",angle)
+    const {steps } = req.body;
+    //let steps = angle * 1.5
+
     console.log(`📥 [DEAL] Požadavek na rozdání:  steps=${steps}`);
 
 

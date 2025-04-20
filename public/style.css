@@ -1,0 +1,116 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.spot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #555;
+    border-radius: 50%;
+}
+.spot.active {
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.rozdavac {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 135px;
+    height: 135px;
+    background: #111;
+    border: 6px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 45px solid white; /* delší špička */
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+
+}
+
+#deal-btn {
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    background: white;
+    margin-top: 50px;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+#deal-btn:hover {
+    background: #eee;
+    transform: scale(1.05);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.zero-dot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    bottom: -25px; /* půlka velikosti ven */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#calibrate-btn {
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    background: white;
+    margin-top: 50px;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+#calibrate-btn:hover {
+    background: #777;
+}
+.cooldown {
+    opacity: 0.5;
+    pointer-events: none;
+}

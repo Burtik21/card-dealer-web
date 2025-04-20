@@ -2,20 +2,26 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8" />
-    <title>Rozdávač Karet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rozdávač přesně</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Vítej u Rozdávače</h1>
-<p>Ovládání bude zde.</p>
+<div class="wrapper">
+<div class="container">
+    <div class="spots" id="spots"></div>
 
-<script>
-    fetch('/api/status')
-        .then(res => res.json())
-        .then(data => {
-            const p = document.createElement('p');
-            p.textContent = `Status: ${data.status}, čas: ${new Date(data.timestamp).toLocaleTimeString()}`;
-            document.body.appendChild(p);
-        });
-</script>
+    <div class="rozdavac">
+        <div class="arrow"></div>
+        <div class="zero-dot"></div>
+    </div>
+  >
+</div>
+<div class="controls">
+    <button id="deal-btn" disabled>ROZDAT</button>
+    <button id="calibrate-btn">KALIBRACE</button>
+</div>
+</div>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

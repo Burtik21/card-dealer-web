@@ -33,7 +33,7 @@ exports.deal = async (req, res) => {
     console.log('⏳ [DEAL] Spuštěn cooldown (3s)');
 
     try {
-        const response = await fetch('http://localhost:5001/python/deal', {
+        const response = await fetch('http://127.0.0.1:5001/python/deal', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ steps })
@@ -57,7 +57,7 @@ exports.calibrate = async (req, res) => {
     console.log('⏳ [CALIBRATE] Spuštěn cooldown (3s)');
 
     try {
-        const response = await fetch('http://localhost:5001/python/calibrate', {
+        const response = await fetch('http://127.0.0.1:5001/python/calibrate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         });

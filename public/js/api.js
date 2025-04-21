@@ -1,6 +1,8 @@
 // 📡 Pošli úhel na /api/deal
 export function deal(angle) {
-    let steps = Math.round(angle * 11.8); // Zaokrouhlení na nejbližší celé číslo
+    const steps = Math.floor(angle * 11.8);
+    console.log(steps)
+    ; // Zaokrouhlení na nejbližší celé číslo
 
     return fetch('/api/deal', {
         method: 'POST',

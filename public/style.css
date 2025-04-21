@@ -6,6 +6,9 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+html {
+    color-scheme: only light;
+}
 
 .container {
     position: relative;
